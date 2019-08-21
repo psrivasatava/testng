@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [testCases]">
+  <test thread-count="5" name="testngTest(failed)">
+    <classes>
+      <class name="testCases.updatescreen">
+        <methods>
+          <include name="tearDown"/>
+          <include name="accept"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testCases.updatescreen -->
+      <class name="testCases.e2E">
+        <methods>
+          <include name="customercapture"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testCases.e2E -->
+    </classes>
+  </test> <!-- testngTest(failed) -->
+</suite> <!-- Failed suite [testCases] -->

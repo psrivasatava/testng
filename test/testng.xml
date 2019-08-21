@@ -1,0 +1,17 @@
+<suite name="testCases">
+
+<listeners>
+		<listener class-name="TestListener" />
+	</listeners>
+ <test name="testngTest">
+ 
+ <classes>
+ <class name="testCases.ccTestCase" />
+ <class name="testCases.e2E" />
+ <class name="testCases.loginTestCase" />
+ <class name="testCases.quote" />
+ <class name="testCases.sub" />
+ <class name="testCases.updatescreen" />
+ </classes>
+ </test>
+</suite>
