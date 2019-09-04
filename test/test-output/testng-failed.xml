@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [testCases]">
-  <test thread-count="5" name="testngTest(failed)">
+  <listeners>
+    <listener class-name="Listener"/>
+  </listeners>
+  <test thread-count="5" name="testngTest.failed(failed)">
     <classes>
-      <class name="testCases.updatescreen">
+      <class name="failed.testfail">
         <methods>
-          <include name="tearDown"/>
-          <include name="accept"/>
           <include name="setup"/>
+          <include name="customercapture"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- testCases.updatescreen -->
+      </class> <!-- failed.testfail -->
+    </classes>
+  </test> <!-- testngTest.failed(failed) -->
+  <test thread-count="5" name="testngTest.testCases(failed)">
+    <classes>
+      <class name="testCases.loginTestCase">
+        <methods>
+          <include name="login"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testCases.loginTestCase -->
       <class name="testCases.e2E">
         <methods>
           <include name="customercapture"/>
@@ -17,6 +31,34 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- testCases.e2E -->
+      <class name="testCases.quote">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="customercapture"/>
+        </methods>
+      </class> <!-- testCases.quote -->
+      <class name="testCases.updatescreen">
+        <methods>
+          <include name="tearDown"/>
+          <include name="accept"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testCases.updatescreen -->
+      <class name="testCases.ccTestCase">
+        <methods>
+          <include name="customercapture"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testCases.ccTestCase -->
+      <class name="testCases.sub">
+        <methods>
+          <include name="tearDown"/>
+          <include name="accept"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testCases.sub -->
     </classes>
-  </test> <!-- testngTest(failed) -->
+  </test> <!-- testngTest.testCases(failed) -->
 </suite> <!-- Failed suite [testCases] -->

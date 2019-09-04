@@ -12,6 +12,7 @@ public class ccTestCase extends Testbase{
 	loginPage LoginPage ;
 	customerCapture CC;
 		
+
 	public ccTestCase()
 	{
 		super();
@@ -27,6 +28,7 @@ public class ccTestCase extends Testbase{
 	}
 	
 	@Test
+	
 	public void customercapture() throws Exception
 	{
 				
@@ -37,7 +39,7 @@ public class ccTestCase extends Testbase{
 		CC.title();
 		CC.firstName("First");
 		CC.lastName("Last name");
-		CC.dateOfBirth("30/08/2000");
+		CC.dateOfBirth("30/05/2000");
 		CC.gender();
 		CC.maritalStatus();
 		CC.residentialStatus();

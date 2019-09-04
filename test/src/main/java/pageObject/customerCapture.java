@@ -1,10 +1,5 @@
 package pageObject;
 
-import java.io.File;
-import java.io.IOException;
-
-import javax.imageio.ImageIO;
-
 import org.openqa.selenium.WebElement;
  
 import org.openqa.selenium.support.FindBy;
@@ -12,9 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-import ru.yandex.qatools.ashot.AShot;
-import ru.yandex.qatools.ashot.Screenshot;
-import ru.yandex.qatools.ashot.screentaker.ViewportPastingStrategy;
+
 import testBase.Testbase;
 
 
@@ -471,14 +464,6 @@ public class customerCapture extends Testbase{
 		
 	public createQuote SaveButton()
 	{
-		//take the screenshot of the entire home page and save it to a png file
-		Screenshot screenshot  = new AShot().shootingStrategy(new ViewportPastingStrategy(1000)).takeScreenshot(driver);
-		try {
-			ImageIO.write(screenshot .getImage(), "PNG", new File("C:\\Users\\psrivastava\\Documents\\Selenium\\cucumber\\Screenshot\\Proposal_PI.png"));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		SaveButton.click();
 		return new createQuote();
 	}

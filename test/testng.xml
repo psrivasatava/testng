@@ -1,8 +1,15 @@
 <suite name="testCases">
 
 <listeners>
-		<listener class-name="TestListener" />
+		<listener class-name="Listener" />
 	</listeners>
+	<test name="testngTest123">
+ 
+ <classes>
+ <class name="test.java.failed.testfail" />
+ </classes>
+ </test>
+	
  <test name="testngTest">
  
  <classes>
