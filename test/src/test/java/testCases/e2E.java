@@ -1,30 +1,26 @@
-
-
-	package testCases;
-
-	import java.io.IOException;
+package testCases;
 
 	import org.testng.annotations.AfterMethod;
-	import org.testng.annotations.BeforeMethod;
-	import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
-	import pageObject.createQuote;
-	import pageObject.customerCapture;
-	import pageObject.loginPage;
-	import pageObject.submit;
-	import pageObject.updateScreen;
-	import testBase.Testbase;
+import pageObject.createQuote;
+import pageObject.customerCapture;
+import pageObject.loginPage;
+import pageObject.submit;
+import pageObject.updateScreen;
+import testBase.Testbase;
 
 	public class e2E extends Testbase{
 		loginPage LoginPage ;
 		customerCapture CC;
-			
+
 		public e2E()
 		{
 			super();
 		}
 
-		
+
 		@BeforeMethod
 		   public void setup()
 		{
@@ -32,11 +28,11 @@
 			LoginPage = new loginPage();
 			CC =	LoginPage.Login(prop.getProperty("username"), prop.getProperty("password"));
 		}
-		
+
 		@Test
 		public void customercapture() throws Exception
 		{
-					
+
 			CC.newProposal();
 			CC.dpaAgreement();
 			CC.customerType();
@@ -88,13 +84,13 @@
 				Thread.sleep(10000);
 				//CQ.assetselection1();
 			//	Thread.sleep(10000);
-				//CQ.manufacture1("AUDI");
+				CQ.manufacture1("AUDI");
 				//CQ.select();
 			CQ.enter();
 		CQ.button2();
 		Thread.sleep(2000);
-			//	CQ.quan("20000");
-			///	CQ.done();
+				CQ.quan("20000");
+				CQ.done();
 				Thread.sleep(10000);
 				CQ.finance1();
 				CQ.search1();
@@ -131,16 +127,15 @@
 			     Thread.sleep(10000);
 			     US.SummaryPage();
 			}
-	
-			
-		
-		
+
+
+
+
 		@AfterMethod
 		public void tearDown()
 		{
 		driver.quit();
 		}
-		
-	}
 
+	}
 

@@ -1,8 +1,4 @@
-
-	
-	package testCases;
-
-	import java.io.IOException;
+package testCases;
 
 	import org.testng.annotations.AfterMethod;
 	import org.testng.annotations.BeforeMethod;
@@ -18,13 +14,13 @@
 	public class quote extends Testbase{
 		loginPage LoginPage ;
 		customerCapture CC;
-			
+
 		public quote()
 		{
 			super();
 		}
 
-		
+
 		@BeforeMethod
 		   public void setup() throws InterruptedException
 		{
@@ -77,34 +73,34 @@
 			 CC.SaveButton();
 			 Thread.sleep(10000);
 		}
-		
+
 		@Test
 		public void customercapture() throws Exception
 		{
-					
-		
-			 
+
+
+
 			 createQuote CQ = new createQuote();
 				CQ.quote1();
 				CQ.newquote1();
 				Thread.sleep(10000);
 				//CQ.assetselection1();
 			//	Thread.sleep(10000);
-			//	CQ.manufacture1("AUDI");
+				CQ.manufacture1("AUDI");
 				//CQ.select();
 			CQ.enter();
 		CQ.button2();
 		Thread.sleep(2000);
-			//	CQ.quan("20000");
-			//	CQ.done();
+				CQ.quan("20000");
+				CQ.done();
 				Thread.sleep(10000);
 				CQ.finance1();
 				CQ.search1();
 				CQ.productSelect();
 				Thread.sleep(10000);
 				CQ.save1();	
-				
-			    
+
+
 			}
 
 		@AfterMethod
@@ -112,6 +108,6 @@
 		{
 		driver.quit();
 		}
-		
+
 
 }

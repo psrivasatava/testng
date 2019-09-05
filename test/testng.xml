@@ -3,15 +3,8 @@
 <listeners>
 		<listener class-name="Listener" />
 	</listeners>
-	<test name="testngTest123">
- 
- <classes>
- <class name="test.java.failed.testfail" />
- </classes>
- </test>
-	
  <test name="testngTest">
- 
+
  <classes>
  <class name="testCases.ccTestCase" />
  <class name="testCases.e2E" />
@@ -21,4 +14,4 @@
  <class name="testCases.updatescreen" />
  </classes>
  </test>
-</suite>
+</suite> 

@@ -52,13 +52,6 @@ public class Testbase {
 			new WebDriverWait(driver,timeout).ignoring(StaleElementReferenceException.class).until(ExpectedConditions.elementToBeClickable(Locator));
 			Locator.click();
 		}
-
-
-
    
-
-
-
-
 }
 
